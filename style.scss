@@ -1,0 +1,22 @@
+---
+---
+
+//$primary: #fed136;
+
+@import "bootstrap-5.1.3/bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+.navbar-brand {
+	font-family: "Kaushan Script";
+}
+
+#services img {
+	width: 120px;
+	height: 120px;
+}
+
+.my-circle {
+	width: 150px;
+	height: 150px;
+}
