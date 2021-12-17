@@ -1,8 +1,7 @@
 ---
-layout: section-centered
+layout: section-carousel
 title: Portfolio
 subtitle: Stuff I've done
-order: 200
+order: 20
 anchor: portfolio
 ---
-My portfolio.

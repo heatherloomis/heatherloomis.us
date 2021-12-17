@@ -1,24 +1,18 @@
 ---
 layout: default
 ---
-<div class="container">
-	<div id="page-top" class="row vh-100 align-items-center text-center">
+<div id="page-top" class="container-fluid">
+	<!--<div id="page-top" class="row align-items-center text-center my-5 py-5">
 		<div class="col">
 			<h1 class="fst-italic">Welcome To Our Studio!</h1>
 			<h1 class="display-1 my-5">It's Nice To Meet You</h1>
 			<a href="#about" class="btn btn-primary btn-lg mt-3">Tell Me More</a>
 		</div>
-	</div>
+	</div>-->
 
 	{% for section in site.sections %}
 	{{ section.output }}
 	{% endfor %}
 </div>
 
-{% comment %}
-{% assign gallery_images = site.static_files | where: "gallery", true %}
-{% for image in gallery_images %}
-<img src="{{image.path}}"/>
-{% endfor %}
-{% endcomment %}
 
