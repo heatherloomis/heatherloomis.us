@@ -17,6 +17,15 @@
 }
 
 .my-circle {
-	width: 150px;
-	height: 150px;
+	@extend .d-inline-flex;
+	@extend .justify-content-center;
+	@extend .align-items-center;
+	@extend .rounded-circle;
+	width: 180px;
+	height: 180px;
+	& svg {
+		width: 120px;
+		height: 120px;
+		fill: $white;
+	}
 }
