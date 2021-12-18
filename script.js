@@ -11,13 +11,21 @@ window.addEventListener('load', function(e) {
 	let carousel_element = document.getElementById('carousel');
 	for (let i=0;i<gallery_images.length;i++) {
 		let img = document.createElement("img");
-		img.src = gallery_images[i];
-		carousel_element.appendChild(img);
+		img.classList.add("tns-lazy-img");
+		img.setAttribute("data-src", "http://localhost:4000"+gallery_images[i]);
+
+		// img.src = gallery_images[i];
+		
+		let div = document.createElement("div");
+		div.appendChild(img);
+
+		carousel_element.appendChild(div);
 	}
 
 	let slider = tns({
 		container: carousel_element,
-		items: 2,
+		items: 18,
+		fixedWidth: 400,
 		slideBy: "page",
 		center: true,
 		controls: false,
@@ -25,12 +33,13 @@ window.addEventListener('load', function(e) {
 		touch: true,
 		mouseDrag: true,
 		swipeAngle: false,
-		responsive: {
-			768: {
-				items: 18,
-				fixedWidth: 400
-			}
-		}
+		lazyload: true
+		// responsive: {
+		// 	768: {
+		// 		items: 18,
+		// 		fixedWidth: 400
+		// 	}
+		// }
 	});
 	
 });
