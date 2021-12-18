@@ -20,7 +20,7 @@
 
 	</head>
 
-	<body data-bs-spy="scroll" data-bs-target="#page-nav" data-bs-offset="0" tabindex="0" id="page-top">
+	<body id="page-top">
 
 		<!-- Navigation -->
 		<nav id="page-nav" class="navbar fixed-top navbar-expand-md navbar-light bg-light">
@@ -51,10 +51,8 @@
 						<a class="nav-link my-4" href="/#section-contact">Contact Me</a>
 
 						<hr class="my-4 w-50 align-self-center"/>
-						<div class="mb-auto mt-4 text-center">
-						{% for network in site.social %}
-						<a href="{{ network.url }}"><i class="bi-{{ network.title }}"></i></a>
-						{% endfor %}
+						<div class="mb-auto mt-4">
+						{% include social-media-block.html %}
 						</div>
 					</div>
 				</div>
@@ -63,22 +61,19 @@
 		
 		{{ content }}
 
-		<footer>
-			<div class="container-fluid">
-				<div class="row align-items-center">
-					<div class="col">
-						<small>Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</small>
-					</div>
-					<div class="col-md-auto">
-						<ul class="list-group list-group-horizontal">
-						{% for network in site.social %}
-							<li class="list-group-item"><a href="{{ network.url }}"><i class="bi-{{ network.title }}"></i></a></li>
-						{% endfor %}
-						</ul>
-					</div>
-					<div class="col text-end">
-						<a class="small" href="#">Privacy Policy</a>
-					</div>
+		<footer class="container-fluid">
+			<div class="row">
+				<div class="col">
+					{% include social-media-block.html %}
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<small class="text-nowrap text-muted fst-italic">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</small>
+				</div>
+				<div class="col-auto">
+					<a class="small text-nowrap text-muted" href="#">Privacy Policy</a>
 				</div>
 			</div>
 		</footer>

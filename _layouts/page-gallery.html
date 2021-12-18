@@ -9,8 +9,8 @@ layout: default
             {{ content }}
         </div>
     </div>
-    <div id="weddings-gallery" class="row my-5" data-masonry='{"percentPosition": true}'>
-        {% assign photos = site.static_files | where: "weddings", true %}
+	<div id="{{ page.anchor }}-gallery" class="row my-5" data-masonry='{"percentPosition": true}'>
+        {% assign photos = site.static_files | where: page.anchor, true %}
         {% for photo in photos %}
         <div class="col-sm-6 col-md-4"><img src="{{ photo.path }}" style="max-height: 400px;" /></div>
         {% endfor %}
