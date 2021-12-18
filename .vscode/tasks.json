@@ -6,7 +6,7 @@
         {
             "label": "Jekyll Server",
             "type": "shell",
-            "command": "docker run --rm --volume=\"C:\\Users\\dorky\\Desktop\\heatherloomis.us:/srv/jekyll\" -it -p 4000:4000 -p 35729:35729 jekyll/jekyll jekyll serve --watch --force_polling --livereload --incremental",
+            "command": "docker run --rm --volume=\"C:\\Users\\dorky\\Desktop\\heatherloomis.us:/srv/jekyll\" -it -p 4000:4000 -p 35729:35729 jekyll/jekyll jekyll serve --watch --force_polling --livereload",
             "problemMatcher": []
         }
     ]

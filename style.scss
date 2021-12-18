@@ -27,20 +27,15 @@ body {
 	white-space: nowrap;
 }
 
-.my-circle {
-	@extend .d-inline-flex;
-	@extend .justify-content-center;
-	@extend .align-items-center;
-	@extend .rounded-circle;
-	width: 140px;
-	height: 140px;
-	& svg {
-		width: 75%;
-		height: 75%;
-		fill: $white;
-	}
+.service-circle {
+	width: 300px;
+	height: 300px;
 }
 
-#page-top > .row:nth-of-type(odd) {
+#sections > .row:nth-of-type(odd) {
 	@extend .bg-light;
+}
+
+.section-gallery {
+	
 }

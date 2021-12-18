@@ -1,19 +1,11 @@
 ---
 layout: default
 ---
-<div id="page-top" class="container-fluid">
+<div id="sections" class="container-fluid">
 
-<div class="row">
-	<div class="col px-0">
-
-		<div id="carousel" class=""></div>
-
-	</div>
-</div>
-
-	{% for section in site.sections %}
-	{{ section.output }}
-	{% endfor %}
+{% for section in site.sections %}
+<div id="section-{{ section.anchor }}" class="row"><div class="col">{{ section.output }}</div></div>
+{% endfor %}
 
 </div>
 

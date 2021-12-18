@@ -12,7 +12,7 @@ window.addEventListener('load', function(e) {
 	for (let i=0;i<gallery_images.length;i++) {
 		let img = document.createElement("img");
 		img.classList.add("tns-lazy-img");
-		img.setAttribute("data-src", "http://localhost:4000"+gallery_images[i]);
+		img.setAttribute("data-src", gallery_images[i]);
 
 		// img.src = gallery_images[i];
 		

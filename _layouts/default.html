@@ -20,7 +20,7 @@
 
 	</head>
 
-	<body data-bs-spy="scroll" data-bs-target="#page-nav" data-bs-offset="0" tabindex="0">
+	<body data-bs-spy="scroll" data-bs-target="#page-nav" data-bs-offset="0" tabindex="0" id="page-top">
 
 		<!-- Navigation -->
 		<nav id="page-nav" class="navbar fixed-top navbar-expand-md navbar-light bg-light">
@@ -31,12 +31,12 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav mx-auto d-none d-md-flex">
-						<a class="nav-link" href="#about">About</a>
-						<a class="nav-link" href="#services">Services</a>
+						<a class="nav-link" href="#section-about">About</a>
+						<a class="nav-link" href="#section-services">Services</a>
 						<a class="nav-link navbar-brand text-primary d-none d-md-inline" href="#page-top">{{ site.title }}</a>
 						
-						<a class="nav-link" href="#pricing">Pricing</a>
-						<a class="nav-link" href="#contact">Contact Me</a>
+						<a class="nav-link" href="#section-pricing">Pricing</a>
+						<a class="nav-link" href="#section-contact">Contact Me</a>
 						{% comment %}
 						{% for section in site.sections %}
 						<a class="nav-link" href="#{{ section.anchor }}">{{ section.title }}</a>
@@ -45,10 +45,10 @@
 					</div>
 					<div id="navbarNavMenuMarkup" class="navbar-nav d-md-none vh-100">
 						<hr class="mt-auto mb-4 w-50 align-self-center" />
-						<a class="nav-link my-4" href="#about">About</a>
-						<a class="nav-link my-4" href="#services">Services</a>
-						<a class="nav-link my-4" href="#pricing">Pricing</a>
-						<a class="nav-link my-4" href="#contact">Contact Me</a>
+						<a class="nav-link my-4" href="#section-about">About</a>
+						<a class="nav-link my-4" href="#section-services">Services</a>
+						<a class="nav-link my-4" href="#section-pricing">Pricing</a>
+						<a class="nav-link my-4" href="#section-contact">Contact Me</a>
 
 						<hr class="my-4 w-50 align-self-center"/>
 						<div class="mb-auto mt-4 text-center">
