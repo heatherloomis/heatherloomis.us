@@ -7,13 +7,32 @@ const gallery_images = [{% for image in gallery_images %}
 
 
 window.addEventListener('load', function(e) {
+
 	let carousel_element = document.getElementById('carousel');
 	for (let i=0;i<gallery_images.length;i++) {
 		let img = document.createElement("img");
 		img.src = gallery_images[i];
 		carousel_element.appendChild(img);
-
 	}
+
+	let slider = tns({
+		container: carousel_element,
+		items: 2,
+		slideBy: "page",
+		center: true,
+		controls: false,
+		nav: false,
+		touch: true,
+		mouseDrag: true,
+		swipeAngle: false,
+		responsive: {
+			768: {
+				items: 18,
+				fixedWidth: 400
+			}
+		}
+	});
+	
 //	const portfolio_carousel_element = document.getElementById("portfolio_carousel");
 //	
 //	let img_elements = portfolio_carousel_element.querySelectorAll(".carousel-item img");
