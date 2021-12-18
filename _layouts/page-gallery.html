@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="container">
+    <div class="row my-5">
+        <div class="col text-center">
+            <h3>{{ page.lead }}</h3>
+            <hr class="w-25 mx-auto my-5"/>
+            {{ content }}
+        </div>
+    </div>
+    <div id="weddings-gallery" class="row my-5" data-masonry='{"percentPosition": true}'>
+        {% assign photos = site.static_files | where: "weddings", true %}
+        {% for photo in photos %}
+        <div class="col-sm-6 col-md-4"><img src="{{ photo.path }}" style="max-height: 400px;" /></div>
+        {% endfor %}
+    </div>
+</div>

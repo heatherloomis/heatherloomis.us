@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/style.css">
 
 		<title>{{ page.title | default: site.title }}</title>
 
@@ -25,30 +25,30 @@
 		<!-- Navigation -->
 		<nav id="page-nav" class="navbar fixed-top navbar-expand-md navbar-light bg-light">
 			<div class="container-fluid">
-				<a class="d-md-none navbar-brand text-primary" href="#page-top">{{ site.title }}</a>
+				<a class="d-md-none navbar-brand text-primary" href="/#page-top">{{ site.title }}</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav mx-auto d-none d-md-flex">
-						<a class="nav-link" href="#section-about">About</a>
-						<a class="nav-link" href="#section-services">Services</a>
-						<a class="nav-link navbar-brand text-primary d-none d-md-inline" href="#page-top">{{ site.title }}</a>
+						<a class="nav-link" href="/#section-about">About</a>
+						<a class="nav-link" href="/#section-services">Services</a>
+						<a class="navbar-brand text-primary d-none d-md-inline ms-3" href="/#page-top">{{ site.title }}</a>
 						
-						<a class="nav-link" href="#section-pricing">Pricing</a>
-						<a class="nav-link" href="#section-contact">Contact Me</a>
+						<a class="nav-link" href="/#section-pricing">Pricing</a>
+						<a class="nav-link" href="/#section-contact">Contact Me</a>
 						{% comment %}
 						{% for section in site.sections %}
-						<a class="nav-link" href="#{{ section.anchor }}">{{ section.title }}</a>
+						<a class="nav-link" href="/#{{ section.anchor }}">{{ section.title }}</a>
 						{% endfor %}
 						{% endcomment %}
 					</div>
 					<div id="navbarNavMenuMarkup" class="navbar-nav d-md-none vh-100">
 						<hr class="mt-auto mb-4 w-50 align-self-center" />
-						<a class="nav-link my-4" href="#section-about">About</a>
-						<a class="nav-link my-4" href="#section-services">Services</a>
-						<a class="nav-link my-4" href="#section-pricing">Pricing</a>
-						<a class="nav-link my-4" href="#section-contact">Contact Me</a>
+						<a class="nav-link my-4" href="/#section-about">About</a>
+						<a class="nav-link my-4" href="/#section-services">Services</a>
+						<a class="nav-link my-4" href="/#section-pricing">Pricing</a>
+						<a class="nav-link my-4" href="/#section-contact">Contact Me</a>
 
 						<hr class="my-4 w-50 align-self-center"/>
 						<div class="mb-auto mt-4 text-center">
@@ -83,10 +83,11 @@
 			</div>
 		</footer>
 
-		<script src="js/bootstrap-5.1.3.bundle.min.js"></script>
+		<script src="/js/bootstrap-5.1.3.bundle.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 		<!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+		<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 
-		<script src="script.js"></script>
+		<script src="/script.js"></script>
 	</body>
 </html>

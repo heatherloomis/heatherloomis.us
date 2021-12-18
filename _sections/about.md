@@ -2,7 +2,7 @@
 layout: section-centered
 title: About Me
 subtitle: Get to know me
-order: 300
+order: 200
 anchor: about
 ---
 

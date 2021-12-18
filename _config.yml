@@ -26,19 +26,35 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  dorkyturtle
 
 collections:
   sections:
     sort_by: order
+  pages:
+    sort_by: order
+    output: true
 
 defaults:
   -
     scope:
-      path: "gallery"
+      path: "gallery/vertical"
     values:
       gallery: true
+  -
+    scope:
+      path: "gallery/weddings"
+    values:
+      weddings: true
+  -
+    scope:
+      path: "gallery/events"
+    values:
+      events: true
+  -
+    scope:
+      path: "gallery/portraits"
+    values:
+      portraits: true
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
