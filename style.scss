@@ -13,6 +13,13 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 .navbar-brand {
 	font-family: "Kaushan Script";
+	@extend .me-0;
+}
+.nav-link {
+	@extend .text-center;
+}
+#navbarNavMenuMarkup {
+	padding-bottom: 56px;
 }
 
 .my-circle {
