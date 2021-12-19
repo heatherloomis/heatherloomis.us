@@ -24,10 +24,14 @@ body, #navbarNavAltMarkup {
 }
 
 .parallax {
+	position: absolute;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.5;
 }
 
 .service-circle {

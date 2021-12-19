@@ -6,14 +6,13 @@ const gallery_images = [
 */
 
 
-window.addEventListener('load', function(e) {
+window.addEventListener('load', function() {
 
 	let carousel_element = document.getElementById('carousel');
 	if (carousel_element) {	
 		let slider = tns({
 			container: carousel_element,
-			//items: 18,
-			fixedWidth: 320,
+			//fixedWidth: 320,
 			slideBy: "page",
 			center: true,
 			controls: false,
@@ -27,10 +26,19 @@ window.addEventListener('load', function(e) {
 	
 	const parallaxes = document.querySelectorAll('.parallax');
 	for (let i=0;i<parallaxes.length;i++) {
-		const element = parallaxes[i];
+		let element = parallaxes[i];
 		const src = element.getAttribute('data-src');
 		element.style['background-image'] = 'url("'+src+'")';
 	}
+
+	window.addEventListener('scroll', function(e) {
+		const parallaxes = document.querySelectorAll('.parallax');
+		for (let i=0;i<parallaxes.length;i++) {
+			const css = '0px '+(0.25 * document.scrollTop)+'px';
+			parallaxes[i].style['background-position'] = css;
+			console.log(this.scrollTop);
+		}
+	});
 });
 
 
