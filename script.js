@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
 	if (carousel_element) {	
 		let slider = tns({
 			container: carousel_element,
-			//fixedWidth: 320,
+			fixedWidth: 400,
 			slideBy: "page",
 			center: true,
 			controls: false,
