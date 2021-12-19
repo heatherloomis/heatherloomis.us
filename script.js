@@ -25,7 +25,12 @@ window.addEventListener('load', function(e) {
 		});
 	}
 	
-	// let rellax = new Rellax('.rellax');
+	const parallaxes = document.querySelectorAll('.parallax');
+	for (let i=0;i<parallaxes.length;i++) {
+		const element = parallaxes[i];
+		const src = element.getAttribute('data-src');
+		element.style['background-image'] = 'url("'+src+'")';
+	}
 });
 
 

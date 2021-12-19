@@ -19,8 +19,15 @@ body, #navbarNavAltMarkup {
 	font-family: "Kaushan Script";
 }
 
-#section-gallery {
+#gallery {
 	min-height: 600px;
+}
+
+.parallax {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .service-circle {

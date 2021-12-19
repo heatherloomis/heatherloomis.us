@@ -4,7 +4,7 @@ layout: default
 
 <div id="sections" class="container-fluid">
 {% for section in site.sections %}
-<div id="{{ section.anchor }}" class="row"><div class="col">{{ section.output }}</div></div>
+<div id="{{ section.anchor }}"{% if section.background %} class="row parallax" data-src="background.jpg"{% endif %}><div class="col">{{ section.output }}</div></div>
 {% endfor %}
 </div>
 
