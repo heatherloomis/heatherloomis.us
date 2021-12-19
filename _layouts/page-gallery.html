@@ -9,10 +9,10 @@ layout: default
             {{ content }}
         </div>
     </div>
+    {% assign images = site.static_files | where: "gallery", true %}
 	<div id="{{ page.anchor }}-gallery" class="row my-5" data-masonry='{"percentPosition": true}'>
-        {% assign photos = site.static_files | where: page.anchor, true %}
-        {% for photo in photos %}
-        <div class="col-sm-6 col-md-4"><img src="{{ photo.path }}" style="max-height: 400px;" /></div>
-        {% endfor %}
+        {% for image in images %}{% assign parts = image.basename | split: "-" %}{% assign tags = parts[2] | split: "," %}{% if tags contains page.anchor %}
+        <div class="col-sm-6 col-md-4"><img src="{{ image.path }}" style="max-height: 400px;" /></div>
+        {% endif %}{% endfor %}
     </div>
 </div>

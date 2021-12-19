@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 collections:
@@ -37,24 +37,9 @@ collections:
 defaults:
   -
     scope:
-      path: "gallery/vertical"
+      path: "gallery"
     values:
       gallery: true
-  -
-    scope:
-      path: "gallery/weddings"
-    values:
-      weddings: true
-  -
-    scope:
-      path: "gallery/events"
-    values:
-      events: true
-  -
-    scope:
-      path: "gallery/portraits"
-    values:
-      portraits: true
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -66,6 +51,8 @@ social:
     url: http://instagram.com/dorkyturtle
   - title: github
     url: http://github.com/heatherloomis
+  - title: pinterest
+    url: http://pintrest.com/heatherloomis
 
 # Build settings
 # theme: minima

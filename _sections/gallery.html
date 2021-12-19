@@ -4,4 +4,8 @@ subtitle: Explore my services
 order: 100
 anchor: gallery
 ---
-<div id="carousel" class=""></div>
+
+{% assign images = site.static_files | where: "gallery", true %}
+<div id="carousel" class="">
+{% for image in images %}{% assign parts = image.basename | split: "-" %}{% if parts[1] == "V" %}<div><img class="tns-lazy-img" data-src="{{ image.path }}" /></div>{% endif %}{% endfor %}];
+</div>
