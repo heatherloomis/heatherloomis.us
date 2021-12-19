@@ -4,7 +4,7 @@ layout: default
 <div id="sections" class="container-fluid">
 
 {% for section in site.sections %}
-<div id="section-{{ section.anchor }}" class="row"><div class="col">{{ section.output }}</div></div>
+<div id="{{ section.anchor }}" class="row"><div class="col">{{ section.output }}</div></div>
 {% endfor %}
 
 </div>

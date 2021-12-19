@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 	<head>
+		<title>{{ page.title | default: site.title }}</title>
+
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="stylesheet" href="/style.css">
-
-		<title>{{ page.title | default: site.title }}</title>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,6 +16,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 		<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
 
+		<link rel="stylesheet" href="/style.css">
 	</head>
 
 	<body id="page-top">
@@ -25,15 +24,15 @@
 		<!-- Fullscreen nav menu -->
 		<div id="navbarNavAltMarkup" class="collapse position-fixed top-0 w-100 vh-100 bg-white">
 			<div class="d-flex flex-column h-100 align-items-center">
-				<hr class="mt-auto mb-4 w-50 align-self-center" />
+				<hr class="mt-auto mb-3 w-50 align-self-center" />
 
-				<a class="nav-link my-4" href="/#section-about"><span data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">About</span></a>
-				<a class="nav-link my-4" href="/#section-services"><span data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">Services</span></a>
-				<a class="nav-link my-4" href="/#section-pricing"><span data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">Pricing</span></a>
-				<a class="nav-link my-4" href="/#section-contact"><span data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">Contact Me</span></a>
+				{% for section in site.sections %}{% if section.menutitle %}
+				<a class="nav-link my-3" href="/#{{section.anchor}}"><span data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">{{ section.menutitle }}</span></a>
+				{% endif %}{% endfor %}
+				
 
-				<hr class="my-4 w-50 align-self-center"/>
-				<div class="mb-auto mt-4">
+				<hr class="my-3 w-50 align-self-center"/>
+				<div class="mb-auto mt-3">
 				{% include social-media-block.html %}
 				</div>
 
@@ -53,11 +52,11 @@
 
 				<div class="collapse navbar-collapse justify-content-center">
 					<div class="navbar-nav">
-						<a class="nav-link" href="/#section-about">About</a>
-						<a class="nav-link" href="/#section-services">Services</a>
+						<a class="nav-link" href="/#about">About</a>
+						<a class="nav-link" href="/#services">Services</a>
 						<a class="navbar-brand text-primary me-0 px-2" href="/#page-top">{{ site.title }}</a>
-						<a class="nav-link" href="/#section-pricing">Pricing</a>
-						<a class="nav-link" href="/#section-contact">Contact Me</a>
+						<a class="nav-link" href="/#pricing">Pricing</a>
+						<a class="nav-link" href="/#contact">Contact Me</a>
 					</div>
 				</div>
 
