@@ -36,6 +36,10 @@ body, #navbarNavAltMarkup {
 	@extend .text-decoration-none;
 }
 
-#sections > .row:nth-of-type(odd) {
-	@extend .bg-light;
-}
+// #sections > .row:nth-of-type(odd) {
+// 	@extend .bg-light;
+// }
+
+// #sections > .row:nth-of-type(even) {
+// 	@extend .bg-white;
+// }

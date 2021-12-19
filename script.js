@@ -25,6 +25,7 @@ window.addEventListener('load', function(e) {
 		});
 	}
 	
+	// let rellax = new Rellax('.rellax');
 });
 
 
