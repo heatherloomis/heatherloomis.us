@@ -24,8 +24,12 @@ body, #navbarNavAltMarkup {
 }
 
 .service-circle {
-	width: 300px;
-	height: 300px;
+	width: 180px;
+	height: 180px;
+	@include media-breakpoint-up(md) {
+		width: 300px;
+		height: 300px;
+	}
 
 	//@extend .text-primary;
 	@extend .h1;
