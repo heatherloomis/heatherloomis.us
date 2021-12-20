@@ -6,3 +6,5 @@ link: _pages/events.html
 ---
 
 Event **blah**
+
+[google](https://google.com "google.com")
