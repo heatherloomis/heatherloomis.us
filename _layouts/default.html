@@ -24,7 +24,8 @@
 		<!-- Fullscreen nav menu -->
 		<div id="navbarNavAltMarkup" class="collapse position-fixed top-0 w-100 vh-100 bg-white">
 			<div class="d-flex flex-column h-100 align-items-center">
-				<hr class="mt-auto mb-3 w-50 align-self-center" />
+				{% include divider-heart.svg %}
+				<!-- <hr class="mt-auto mb-3 w-50 align-self-center" /> -->
 
 				{% for section in site.sections %}{% if section.menutitle %}
 				<a class="nav-link my-3" href="/#{{section.anchor}}"><span data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">{{ section.menutitle }}</span></a>
