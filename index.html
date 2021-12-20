@@ -6,7 +6,7 @@ layout: default
 {% for section in site.sections %}
 	<div id="{{ section.anchor }}" class="row position-relative">
 		{% if section.background %}
-		<div class="parallax" data-src="{{ section.background }}"></div>
+		<div class="parallax" data-src="{% link {{ section.background }} %}"></div>
 		{% endif %}
 		<div class="col">{{ section }}</div>
 	</div>
