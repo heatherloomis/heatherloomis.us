@@ -4,20 +4,16 @@ subtitle: Explore my services
 order: 300
 anchor: services
 menutitle: Services
-background: gallery/0001-V-weddings.jpg
 ---
 
 <div class="container my-5 py-5">
 	<div class="row">
-		<div class="col d-flex justify-content-center">
+		{% for service in site.services %}
+		<div class="col">{{ service }}</div>
+		{% endfor %}
+		<!-- <div class="col d-flex justify-content-center">
 			<a href="{% link _pages/weddings.html %}" class="service-card rounded-circle d-flex align-items-center justify-content-center m-5" style="background-image:url('gallery/0003-V-weddings.jpg');background-position:center;">Weddings</a>
-		</div>
-		<div class="col d-flex justify-content-center">
-			<a href="{% link _pages/events.html %}" class="service-card rounded-circle d-flex align-items-center justify-content-center m-5" style="background-image:url('gallery/0001-V-weddings.jpg');background-position:center;">Events</a>
-		</div>
-		<div class="col d-flex justify-content-center">
-			<a href="{% link _pages/portraits.html %}" class="service-card rounded-circle d-flex align-items-center justify-content-center m-5" style="background-image:url('gallery/0002-V-weddings.jpg');background-position:center;">Portraits</a>
-		</div>
+		</div> -->
 	</div>
 
 </div>

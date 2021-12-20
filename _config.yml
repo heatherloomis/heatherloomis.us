@@ -28,11 +28,14 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 collections:
+  services:
+    sort_by: order
   sections:
     sort_by: order
   pages:
     sort_by: order
     output: true
+  
 
 defaults:
   -

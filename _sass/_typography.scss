@@ -30,10 +30,11 @@
 }
 
 .service-card {
-	@extend .text-decoration-none;
-	@extend .display-3;
-
-	font-family: 'Dancing Script', cursive;
+	.card-title {
+		font-family: 'EB Garamond', serif;
+		@extend .display-5;
+		@extend .text-center;
+	}
 }
 
 .page-heading {
