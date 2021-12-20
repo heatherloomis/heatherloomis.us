@@ -38,43 +38,7 @@ body, #navbarNavAltMarkup {
 	opacity: 0.5;
 }
 
-/**
 
-	Import fonts here!
-
-**/
-//@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
-
-
-.navbar-brand {
-	font-family: 'Emilys Candy', cursive;
-}
-
-.section-content {
-	//font-family: 'Playfair Display', serif;
-	font-family: 'EB Garamond', serif;
-}
-
-.section-title {
-	font-family: 'Dancing Script', cursive;
-}
-
-.section-subtitle {
-	@extend .small;
-	@extend .text-muted;
-	@extend .fst-italic;
-}
-
-.service-circle {
-	@extend .text-decoration-none;
-	@extend .display-3;
-
-	font-family: 'Dancing Script', cursive;
-}
 
 
 
@@ -82,3 +46,4 @@ body, #navbarNavAltMarkup {
 // 	@extend .bg-light;
 // }
 
+@import "typography";
