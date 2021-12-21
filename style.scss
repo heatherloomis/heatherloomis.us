@@ -6,16 +6,19 @@
 @import "bootstrap-5.1.3/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 
-body, #navbarNavAltMarkup {
-	padding-top: 3.5rem;
+body {
+	width: 100%;
+// 	padding-top: 3.5rem;
 }
 
 #navbarNavAltMarkup {
+	padding-top: 3.5rem;
 	z-index: $zindex-dropdown;
+	background-color: rgba(255, 255, 255, 0.85);
 }
 
-#gallery {
-	min-height: 600px;
+#carousel {
+	
 }
 
 // .service-card {
@@ -39,7 +42,21 @@ body, #navbarNavAltMarkup {
 }
 
 
+.section-divider {
+	svg {
+		max-height: 4rem;
+	}
 
+	//@extend .pt-5;
+	@extend .text-center;
+}
+
+// .navbar {
+// 	opacity: 85%;
+// }
+// #sections {
+// 	@extend .px-0;
+// }
 
 
 // #sections > .row:nth-of-type(odd) {

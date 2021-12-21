@@ -2,7 +2,12 @@
 layout: default
 ---
 
-<div id="sections" class="container-fluid">
+
+{% assign images = site.static_files | where: "gallery", true %}
+<div id="carousel" class="text-nowrap overflow-auto">{% for image in images %}{% assign parts = image.basename | split: "-" %}{% assign tags = parts[2] | split: "," %}{% if parts[1] == "V" and tags contains "carousel" %}<img draggable="false" class="vh-100" src="{{ image.path }}" />{% endif %}{% endfor %}</div>
+
+
+<div id="sections" class="container">
 {% for section in site.sections %}
 	<div id="{{ section.anchor }}" class="row position-relative">
 		{% if section.background %}
